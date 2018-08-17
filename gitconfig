@@ -1,0 +1,13 @@
+[user]
+	email = mike.salsone@gmail.com
+	name = Michael Salsone
+[push]
+	default = simple
+	[alias]
+	  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%%an>%Creset' --abbrev-commit
+	  # see the revision history similar to gitk but in the command line
+	  lol = log --pretty=format:'%C(yellow)%h %C(blue bold)%ad%C(reset)%C(white)%d %C(reset)%s %C(green)[%cn]' --date=short --all --graph --decorate
+	  # pretty one-line log with tags, branches and authors
+	  ls = log --pretty=format:'%C(yellow)%h %C(blue bold)%ad %C(reset)%C(white)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short
+	  # more verbose log that shows changed files
+	  ll = log --pretty=format:'%C(yellow)%h %C(blue bold)%ad %C(reset)%C(white)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short --stat
