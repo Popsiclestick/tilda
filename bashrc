@@ -5,7 +5,7 @@ alias sudo='sudo '
 alias br='. ~/.bashrc'
 alias ipp="curl -w '\n' https://canihazip.com/s"
 alias grep='grep --color=auto'
-alias sr="source ~/.bashrc"
+alias grpe='grep'
 alias st="tmux source-file ~/.tmux.conf"
 alias nett='lsof -n -i4TCP | grep LISTEN'
 alias cdgo='cd ~/go/src/'
