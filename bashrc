@@ -10,8 +10,6 @@ alias st="tmux source-file ~/.tmux.conf"
 alias nett='lsof -n -i4TCP | grep LISTEN'
 alias cdgo='cd ~/go/src/'
 
-# Server Aliases
-
 #ls & tail aliases
 alias ls='ls -CFG'
 alias ll='ls -la'
@@ -49,6 +47,11 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
+# Shorten git commit
+gm () {
+    git commit -m "$1";
+}
+
 # Prompt
 if [[ $- == *i* ]]; then
   export PS1="\[$(tput setaf 2)\][\u\[$(tput setaf 5)\]@\[$(tput setaf 2)\]\h]\[$(tput setaf 5)\] in \[$(tput setaf 2)\]\w\[$(tput setaf 7)\]\$(parse_git_branch)\[$(tput setaf 5)\] at\[$(tput setaf 2)\] \D{%Y-%m-%d} \[$(tput setaf 5)\]\t\n:; \[$(tput sgr0)\]"
@@ -75,6 +78,15 @@ extract () {
          echo "'$1' is not a valid file"
      fi
 }
+
+# Docker functions
+netshoot () {
+    if [ $# -eq 1 ] ; then
+      docker run -it --net container:$1 nicolaka/netshoot
+    fi
+}
+
+
 
 # Git Completion
 test -f ~/.git-completion.bash && . $_

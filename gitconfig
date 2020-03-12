@@ -11,3 +11,6 @@
 	  ls = log --pretty=format:'%C(yellow)%h %C(blue bold)%ad %C(reset)%C(white)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short
 	  # more verbose log that shows changed files
 	  ll = log --pretty=format:'%C(yellow)%h %C(blue bold)%ad %C(reset)%C(white)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short --stat
+
+[includeIf "gitdir:~/personal-git/"]
+  path = .gitconfig-personal
