@@ -1,2 +1,2 @@
 # No place like ~/
-Just a collection of my stuff from over the years.
+Storage for the various odds and ends that help me function efficiently.
