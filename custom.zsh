@@ -31,6 +31,7 @@ alias gs="git status"
 alias gb="git branch"
 alias gitpp="git pull && git push"
 alias gcm="git checkout master"
+alias gh="open https://github.$(git config remote.origin.url | cut -f2 -d. | tr ':' /)"
 
 # # Programming aliases
 alias pe="source venv/bin/activate"
